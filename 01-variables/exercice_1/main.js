@@ -1,3 +1,7 @@
 //écrire votre code ici
 
-//ce programme affiche un esssage hello world
+// Ce programme affiche un message Hello World
+const message = "Hello World";
+console.log(message);
+
+module.exports = { message };

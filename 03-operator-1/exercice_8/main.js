@@ -17,3 +17,13 @@ if (reste >= 100) {
 } else {
   console.log("Attention, budget serré");
 }
+
+module.exports = {
+  salaireMensuel,
+  loyer,
+  nourriture,
+  transport,
+  autresDepenses,
+  totalDepenses,
+  reste,
+};

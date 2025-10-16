@@ -1,47 +1,34 @@
 // Exercice 9
 // Écrivez votre code ici
 
-// Fonction pour calculer l'héritage
-function calculerHeritage(patrimoineTotal) {
-  // Répartition par catégories
-  const partPremiereCategorie = 0.75 * patrimoineTotal;
-  const partDeuxiemeCategorie = 0.25 * patrimoineTotal;
+const totalHeritage = 120_000_000;
 
-  // Première catégorie : enfants
-  const enfants = ["Paul", "Marie", "Alain"];
-  const nbPartsPremiereCat = enfants.length;
-  const partParEnfant = partPremiereCategorie / nbPartsPremiereCat;
+// Première catégorie (75%)
+const paul = (totalHeritage * 0.75) / 3;
+const marie = (totalHeritage * 0.75) / 3;
+const clair = (totalHeritage * 0.75) / 3 / 2;
+const eric = (totalHeritage * 0.75) / 3 / 2;
 
-  // Alain est décédé, sa part est partagée entre Éric et Claire
-  const partAlain = partParEnfant;
-  const partEric = partAlain / 2;
-  const partClaire = partAlain / 2;
+// Deuxième catégorie (25%)
+const madameMukuna = (totalHeritage * 0.25) / 3;
+const joseph = (totalHeritage * 0.25) / 3;
+const sarah = (totalHeritage * 0.25) / 3;
 
-  // Deuxième catégorie : conjoint + frères/sœurs
-  const deuxiemeCategorie = ["Madame MUKUNA", "Joseph", "Sarah"];
-  const nbPartsDeuxiemeCat = deuxiemeCategorie.length;
-  const partParMembre = partDeuxiemeCategorie / nbPartsDeuxiemeCat;
+console.log("Paul :", paul);
+console.log("Marie :", marie);
+console.log("Clair :", clair);
+console.log("Eric :", eric);
+console.log("Madame Mukuna :", madameMukuna);
+console.log("Joseph :", joseph);
+console.log("Sarah :", sarah);
 
-  // Héritages finaux
-  return {
-    Paul: partParEnfant,
-    Marie: partParEnfant,
-    Éric: partEric,
-    Claire: partClaire,
-    "Madame MUKUNA": partParMembre,
-    Joseph: partParMembre,
-    Sarah: partParMembre,
-  };
-}
-
-if (require.main === module) {
-  const patrimoineTotal = 120_000_000;
-  const heritages = calculerHeritage(patrimoineTotal);
-
-  console.log("=== Répartition de l’héritage de M. Jean MUKUNA ===");
-  for (let [nom, montant] of Object.entries(heritages)) {
-    console.log(`${nom} reçoit : ${montant.toLocaleString("fr-CD")} CDF`);
-  }
-}
-
-module.exports = calculerHeritage;
+module.exports = {
+  paul,
+  marie,
+  clair,
+  eric,
+  madameMukuna,
+  joseph,
+  sarah,
+  totalHeritage,
+};

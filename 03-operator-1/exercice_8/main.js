@@ -3,20 +3,21 @@
 
 const salaireMensuel = 500;
 const loyer = salaireMensuel * 0.3;
-const nouriture = salaireMensuel * 0.2;
+const nourriture = salaireMensuel * 0.2;
 const transport = salaireMensuel * 0.1;
-let autreDepenses = 50;
-autreDepenses += 25;
-let totalDepenses = loyer + nouriture + transport + autreDepenses;
-let reste = salaireMensuel + totalDepenses;
+let autresDepenses = 50;
+autresDepenses += 25;
 
-// Vérifier si le budget est bien
+const totalDepenses = loyer + nourriture + transport + autresDepenses;
+const reste = salaireMensuel - totalDepenses;
 
-if (reste >= 100) {
-  console.log("Budget bien géré");
-} else {
-  console.log("Attention, budget serré");
-}
+console.log("Salaire mensuel :", salaireMensuel);
+console.log("Loyer :", loyer);
+console.log("Nourriture :", nourriture);
+console.log("Transport :", transport);
+console.log("Autres dépenses :", autresDepenses);
+console.log("Total dépenses :", totalDepenses);
+console.log("Reste :", reste);
 
 module.exports = {
   salaireMensuel,

@@ -12,3 +12,5 @@ let fahrenheit = (celsius * 9) / 5 + 32;
 // Affichage du résultat
 
 console.log(celsius + "°C = " + fahrenheit + "°F");
+
+module.exports = { celsius, fahrenheit };

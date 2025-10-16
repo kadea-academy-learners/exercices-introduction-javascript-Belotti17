@@ -6,3 +6,5 @@ const b = 8;
 
 const somme = a + b;
 console.log(somme);
+
+module.exports = { a, b, somme };

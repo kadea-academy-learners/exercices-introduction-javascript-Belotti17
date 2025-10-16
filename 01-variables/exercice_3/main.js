@@ -3,3 +3,5 @@
 
 const ville = "kinshasa";
 console.log(ville);
+
+module.exports = { ville };

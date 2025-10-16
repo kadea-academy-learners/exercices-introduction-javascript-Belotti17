@@ -1,7 +1,7 @@
 // Exercice 3
 // Écrivez votre code ici
 
-const ville = "kinshasa";
-console.log(ville);
+const VILLE = "Kinshasa";
+console.log(VILLE);
 
-module.exports = { ville };
+module.exports = { VILLE };

@@ -1,23 +1,16 @@
 // Exercice 7
 // Écrivez votre code ici
-let ageEnfant = 10;
-let agePère = ageEnfant * 2;
-let ageMère = agePère - 5;
-let ageGrandPère = ageMère * 2 + ageEnfant / 2;
-let ageOncle = agePère + 10;
 
-// Affichage des résultats
+const ageEnfant = 10;
+const agePere = ageEnfant * 2;
+const ageMere = agePere - 5;
+const ageGrandPere = ageMere * 2 + ageEnfant / 2;
+const ageOncle = agePere + 10;
 
-console.log("Âge de l’enfant :", ageEnfant, "ans");
-console.log("Âge du père :", agePère, "ans");
-console.log("Âge de la mère :", ageMère, "ans");
-console.log("Âge du grand-père :", ageGrandPère, "ans");
-console.log("Âge de l’oncle :", ageOncle, "ans");
+console.log("Âge de l’enfant :", ageEnfant);
+console.log("Âge du père :", agePere);
+console.log("Âge de la mère :", ageMere);
+console.log("Âge du grand-père :", ageGrandPere);
+console.log("Âge de l’oncle :", ageOncle);
 
-module.exports = {
-  ageEnfant,
-  agePère,
-  ageMère,
-  ageGrandPère,
-  ageOncle,
-};
+module.exports = { ageEnfant, agePere, ageMere, ageGrandPere, ageOncle };
